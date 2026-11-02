@@ -689,6 +689,11 @@ i.qv-a{background:var(--h700)} i.qv-r{background:var(--iglesia)} i.qv-p{backgrou
 @media (min-width:900px){.menu .largo{white-space:nowrap;font-size:.97rem}}
 .silueta-lista{width:84px;margin:1.8rem auto .2rem;opacity:.85}
 #v-quever .vias{margin-bottom:3.4rem}
+.sello-destacado{display:flex;justify-content:center;margin:1.4rem 0 1.6rem}
+#v-hoteles .sello-destacado .sello-inline{font-size:.95rem;padding:.45rem 1.2rem .45rem 1rem;margin:0;display:inline-flex;align-items:center;gap:.45rem}
+#v-hoteles .sello-destacado .sello-inline::before{content:"✓";font-weight:700}
+#v-hoteles .nota-precios{margin-top:0!important;padding:.85rem 1.1rem;background:var(--carta);border-radius:14px;border:1px solid var(--linea)}
+#v-hoteles .nota-precios strong{color:var(--h900);font-weight:600}
 </style>
 </head>
 <body>
@@ -765,7 +770,7 @@ i.qv-a{background:var(--h700)} i.qv-r{background:var(--iglesia)} i.qv-p{backgrou
         <p class="hora">18:00<small>h</small></p>
         <h3>Monasterio de Santa María de Armenteira</h3>
         <p class="dir">Armenteira, Meis (Pontevedra)</p>
-        <p class="texto">Cada uno llega por su cuenta desde su alojamiento.</p>
+        <p class="texto">La llegada al monasterio la hará cada invitado por su cuenta, desde su alojamiento, en coche o en taxi.</p>
         <a class="enlace" href="https://www.google.com/maps/search/?api=1&query=Monasterio%20de%20Santa%20Mar%C3%ADa%20de%20Armenteira" target="_blank" rel="noopener">Cómo llegar</a>
       </div>
     </article>
@@ -779,7 +784,7 @@ i.qv-a{background:var(--h700)} i.qv-r{background:var(--iglesia)} i.qv-p{backgrou
         <p class="hora">19:30<small>h</small></p>
         <h3>Pazo Casalnovo</h3>
         <p class="dir">Os Barreiros 30, Caldas de Reis (Pontevedra)</p>
-        <p class="texto">Habrá autobuses desde el monasterio y, al terminar, de vuelta a los alojamientos.</p>
+        <p class="texto">Al terminar la ceremonia, habrá autobuses desde la salida del monasterio hasta el pazo. Al finalizar la celebración, pondremos autobuses de vuelta con dos rutas diferentes, en función de dónde se aloje cada invitado.</p>
         <a class="enlace" href="https://www.google.com/maps/search/?api=1&query=Pazo%20Casalnovo%2C%20Os%20Barreiros%2030%2C%20Caldas%20de%20Reis" target="_blank" rel="noopener">Cómo llegar</a>
       </div>
     </article>
@@ -821,7 +826,7 @@ i.qv-a{background:var(--h700)} i.qv-r{background:var(--iglesia)} i.qv-p{backgrou
     </div>
       <div class="mm-callout" aria-live="polite"><span class="mm-callout-num" id="tramo-num">1</span><p id="tramo-texto"></p></div>
     </div>
-    <p class="aviso-bus">Rutas de autobús pendientes de confirmación. Los trayectos en coche hasta el monasterio son orientativos.</p>
+    <p class="aviso-bus">Rutas de autobús pendientes de confirmación, en función del alojamiento de los invitados. Los trayectos en coche hasta el monasterio son orientativos.</p>
   </div>
 
 <!-- ===== PREBODA ===== -->
@@ -923,12 +928,12 @@ i.qv-a{background:var(--h700)} i.qv-r{background:var(--iglesia)} i.qv-p{backgrou
 
 <!-- ===== HOTELES ===== -->
 <section class="vista" id="v-hoteles" aria-label="Hoteles" hidden>
-  <header id="hoteles-cab" class="cab-hoteles"><h2>Hoteles</h2><p>Hemos hablado con varios hoteles de la zona para el fin de semana del 23 al 25 de julio, y en algunos hemos conseguido condiciones especiales para vosotros: los veréis con el sello <span class="sello-inline">Tarifa para invitados</span>.</p><p class="nota-precios">Precios orientativos para 2 personas y 2 noches (23 y 24 de julio) en habitación doble. Tiempos en coche. También podéis buscar apartamentos en Airbnb o Booking.</p></header>
+  <header id="hoteles-cab" class="cab-hoteles"><h2>Hoteles</h2><p>Hemos hablado con varios hoteles de la zona para el fin de semana del 23 al 25 de julio, y en algunos hemos conseguido condiciones especiales para vosotros. Los reconoceréis por este sello:</p><div class="sello-destacado"><span class="sello-inline">Tarifa para invitados</span></div><p class="nota-precios"><strong>Precios orientativos para 2 personas y 2 noches (23 y 24 de julio) en habitación doble.</strong> Tiempos en coche. También podéis buscar apartamentos en Airbnb o Booking.</p></header>
   <div class="barra-hoteles">
     <div class="fila-controles">
       
       <label class="orden">Ordenar por
-        <select id="orden"><option value="zona">Zona</option><option value="precio">Precio</option><option value="nota">Valoración</option><option value="iglesia">Cercanía a la iglesia</option></select>
+        <select id="orden"><option value="zona">Zona</option><option value="precio">Precio</option><option value="nota">Valoración</option><option value="iglesia">Cercanía al monasterio</option></select>
       </label>
     </div>
     <div class="chips" role="group" aria-label="Filtrar hoteles">
@@ -994,7 +999,7 @@ i.qv-a{background:var(--h700)} i.qv-r{background:var(--iglesia)} i.qv-p{backgrou
     <span><i class="ley-hotel dto"></i>Con tarifa para invitados</span>
     <span>Pulsa cualquier punto para ver los detalles</span>
   </div>
-  <p class="aviso-bus">Rutas de autobús pendientes de confirmación.</p>
+  <p class="aviso-bus">Rutas de autobús pendientes de confirmación, en función del alojamiento de los invitados.</p>
 </div>
 
 </main>
@@ -1221,8 +1226,8 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'){var f=docum
 function mostrarBus(id){
   var box=document.getElementById('resultado');if(!id){box.classList.remove('on');return}
   var h=buscar(id),r=rutaDe(h),o='';
-  o+='<div class="fila"><b>A la iglesia</b><span>Por vuestra cuenta'+(h.ida?', unos '+h.ida+' min en coche'+(h.idaNota?' ('+h.idaNota+')':''):'')+'.</span></div>';
-  o+='<div class="fila"><b>Al pazo</b><span>Autobús desde la iglesia al Pazo Casalnovo.</span></div>';
+  o+='<div class="fila"><b>Al monasterio</b><span>Por vuestra cuenta'+(h.ida?', unos '+h.ida+' min en coche'+(h.idaNota?' ('+h.idaNota+')':''):'')+'.</span></div>';
+  o+='<div class="fila"><b>Al pazo</b><span>Autobús desde el monasterio al Pazo Casalnovo.</span></div>';
   if(r){
     var i=RUTAS[r].paradas.indexOf(h.parada)+1;
     o+='<div class="fila"><b>De vuelta</b><span><span class="marca-ruta"><i class="'+r+'"></i>'+RUTAS[r].n+'</span>, parada '+i+': '+PARADAS[h.parada].n+(h.vuelta?' (unos '+h.vuelta+' desde el pazo)':'')+'.</span></div>';
@@ -1250,7 +1255,7 @@ function tarjeta(h){
    '<span class="zona">'+(h.lugar||h.z)+'</span><span class="nota-b">'+nota(h.v)+'</span>'+(h.d?'<span class="sello">Tarifa para invitados</span>':'')+'</div>'+
    '<div class="cuerpo"><h3>'+h.n+'</h3>'+
    '<div class="linea-precio"><span class="eur">'+h.p+' €</span><span class="eur-sub">2 noches, 2 personas'+(h.des?' · con desayuno':'')+'</span></div>'+
-   '<div class="tiempos"><span class="pastilla">Iglesia '+h.ida+' min'+(h.idaNota?' ('+h.idaNota+')':'')+'</span><span class="pastilla '+(r?'bus':'sin')+'">'+textoBus(h)+'</span></div>'+
+   '<div class="tiempos"><span class="pastilla">Monasterio '+h.ida+' min'+(h.idaNota?' ('+h.idaNota+')':'')+'</span><span class="pastilla '+(r?'bus':'sin')+'">'+textoBus(h)+'</span></div>'+
    (h.d?'<div class="beneficios"><ul>'+h.d.b.map(function(x){return '<li>'+x+'</li>'}).join('')+'</ul><p>'+h.d.c+'</p></div>':'')+
    (h.pend?'<p class="pdte-txt">Estamos negociando condiciones con este hotel.</p>':'')+
    '<div class="acciones-h">'+(bk?'<a class="prim" href="'+bk+'" target="_blank" rel="noopener">Booking</a>':'')+
